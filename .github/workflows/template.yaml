@@ -4,7 +4,7 @@ on:
     inputs:
       environment:
         type: string
-        requried: true
+        required: true
 
 jobs:
   templatejob1:
