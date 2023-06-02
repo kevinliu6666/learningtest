@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: step1
         run: |
-          echo "test1"
+          echo "test1 - ${{ inputs.environment }}"
