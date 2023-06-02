@@ -1,0 +1,21 @@
+name: template
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        requried: true
+
+jobs:
+  templatejob1:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: step1
+        run: |
+          echo "step1"
+      - name: step2
+        run: |
+          echo "step2 - ${{ inputs.environment }}"
+      - name: step3
+        run: |
+          echo "step3"
