@@ -14,8 +14,10 @@ jobs:
         run: |
           echo "step1"
       - name: step2
+        if: startsWith(github.event.inputs.environment, 'prd')
         run: |
           echo "step2 - ${{ inputs.environment }}"
       - name: step3
+        if: ${{ inputs.environment == 'prd' }}
         run: |
-          echo "step3"
+          echo "step3 - ${{ inputs.environment }}"
