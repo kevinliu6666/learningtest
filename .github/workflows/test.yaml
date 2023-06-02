@@ -8,6 +8,7 @@ on:
 
 jobs:
   mainjob1:
+    runs-on: ubuntu-lastest
     steps:
       - name: step1
         run: |
